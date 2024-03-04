@@ -1,5 +1,7 @@
 # LCCracker
 > A simple Lunar Client cracker that I made, it depends on NodeJS.
+![image](https://github.com/ashishagarwal2023/LunarCracker/assets/83082760/5d895f11-8fad-475d-9f2b-99ca9d64bbc1)
+It works, yes it works! On all lunar client versions. If you recieve "Invalid session" with your username after using this tool, you've cracked Lunar Client and can freely go multi or single player now! For all mc versions with lunar client!
 
 ## Usage
 `./lccracker.exe crack <username>` and restart Lunar Client (and minecraft).
