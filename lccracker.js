@@ -38,12 +38,7 @@ program
         console.log(
           "Cracked successfully. Run Lunar Client to see if it works!"
         );
-      } else {
-        fs.writeFileSync(filePath, content);
-        console.log(
-          "Cracked successfully. Run Lunar Client to see if it works!"
-        );
-      }
+   
     } catch (error) {
       console.error("Writting the file failed:", error.message);
     }
