@@ -21,3 +21,6 @@ Just download from releases. Or if you do not trust, you can compile the source 
 
 ## Compiling yourslf
 Install `pkg`, and `pkg lccracker.js -t node18-win` & you get the exe file.
+
+## Legal
+I do not promote cracking things, this project is just for educational purposes. I'm learning NodeJS yet and so I made this simple project I liked to.
