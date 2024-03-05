@@ -14,6 +14,8 @@ It works, yes it works! On all lunar client versions. If you recieve "Invalid se
 `./lccracker.exe crack <username>` and restart Lunar Client (and minecraft).
 > This works by overwritting the accounts.json with a invalid file but specifying a username, making it fail to login as premium but we get cracked.
 
+> _New:_ As of 1.1.0, it will automatically crash and re-launch Lunar Client upon cracking.
+
 ## Downloading
 Just download from releases. Or if you do not trust, you can compile the source yourself. I made it a exe so peoples who don't want to install NodeJS can also work.
 
