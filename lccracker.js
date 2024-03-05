@@ -5,6 +5,7 @@
 // ./lccracker.exe crack <username>
 
 const { program } = require("commander");
+const { exec, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
@@ -15,6 +16,44 @@ const filePath = path.join(
   "game",
   "accounts.json"
 );
+
+const processName = "Lunar Client.exe";
+const username =
+  process.env.USERNAME || process.env.USERPROFILE.split("\\").pop();
+const lunarClientPath = `C:\\Users\\${username}\\AppData\\Local\\Programs\\launcher\\Lunar Client.exe`;
+
+async function kill() {
+  console.log("Killing Lunar Client...");
+  await exec(`taskkill /im "${processName}" /f`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error killing lunar: ${error}`);
+      return;
+    }
+    console.log(`Killed Lunar Client: ${stdout}`);
+  });
+}
+
+function launch() {
+  const lunarClientProcess = spawn(lunarClientPath, [], {
+    detached: true,
+    stdio: "ignore",
+  });
+  lunarClientProcess.unref();
+  console.log(`Relaunched Lunar Client from: ${lunarClientPath}`);
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+async function main() {
+  await kill();
+  await sleep(500);
+  launch();
+  console.log("Lunar Client has been cracked and launched.");
+}
 
 program
   .version("1.0.0")
@@ -38,10 +77,11 @@ program
         console.log(
           "Cracked successfully. Run Lunar Client to see if it works!"
         );
-   
+      }
     } catch (error) {
       console.error("Writting the file failed:", error.message);
     }
+    main();
   });
 
 program.parse(process.argv);
