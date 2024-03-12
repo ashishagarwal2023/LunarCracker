@@ -1,3 +1,4 @@
+> _⚠️ My friend just told me it stopped working, I'm trying to fix it, thanks._
 # LCCracker
 > A simple Lunar Client cracker that I made, it depends on NodeJS.
 
