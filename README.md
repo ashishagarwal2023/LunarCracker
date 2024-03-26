@@ -1,4 +1,5 @@
 > _⚠️ My friend just told me it stopped working, I'm trying to fix it, thanks._
+> _I'm not going to work on this anymore, sorry!_
 # LCCracker
 > A simple Lunar Client cracker that I made, it depends on NodeJS.
 
